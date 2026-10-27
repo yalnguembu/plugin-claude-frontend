@@ -1,5 +1,5 @@
 {
-  "name": "claude-pluggin-frontend",
+  "name": "plugin-claude-frontend",
   "private": true,
   "type": "module",
   "scripts": {

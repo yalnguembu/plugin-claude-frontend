@@ -1,4 +1,4 @@
-# claude-pluggin-frontend
+# plugin-claude-frontend
 
 Plugin Claude Code pour les projets front : le workflow d'une tâche (une tâche, une branche, une pull request vers
 `develop`), des gardes qui le font respecter, la recette MVVM du front et une revue avant présentation.
@@ -10,12 +10,12 @@ Ce dépôt est à la fois **le plugin** et **sa marketplace** (`.claude-plugin/m
 
 | Type | Nom | Rôle |
 |---|---|---|
-| Commande | `/claude-pluggin-frontend:tache-debut <branche ou ID>` | Ouvre ou reprend une tâche : branche tirée de la base, contrat à jour, lecture de la fiche, questions avant de coder |
-| Commande | `/claude-pluggin-frontend:aligner-contrat` | Sous-module du contrat, CHANGELOG depuis la version alignée, client régénéré, commit proposé |
-| Commande | `/claude-pluggin-frontend:verifier [fin]` | Scripts de contrôle, specs e2e de la tâche (ou suite de fin de cycle), revue, contrôle visuel, critères |
-| Commande | `/claude-pluggin-frontend:compte-rendu` | Fait, textes nouveaux, écarts, questions, contrôle ; demande l'accord |
-| Commande | `/claude-pluggin-frontend:livrer` | Commits conventionnels, envoi, pull request vers la base, après accord |
-| Commande | `/claude-pluggin-frontend:etat [note]` | Met à jour le fichier d'état pour la session suivante |
+| Commande | `/plugin-claude-frontend:tache-debut <branche ou ID>` | Ouvre ou reprend une tâche : branche tirée de la base, contrat à jour, lecture de la fiche, questions avant de coder |
+| Commande | `/plugin-claude-frontend:aligner-contrat` | Sous-module du contrat, CHANGELOG depuis la version alignée, client régénéré, commit proposé |
+| Commande | `/plugin-claude-frontend:verifier [fin]` | Scripts de contrôle, specs e2e de la tâche (ou suite de fin de cycle), revue, contrôle visuel, critères |
+| Commande | `/plugin-claude-frontend:compte-rendu` | Fait, textes nouveaux, écarts, questions, contrôle ; demande l'accord |
+| Commande | `/plugin-claude-frontend:livrer` | Commits conventionnels, envoi, pull request vers la base, après accord |
+| Commande | `/plugin-claude-frontend:etat [note]` | Met à jour le fichier d'état pour la session suivante |
 | Skill | `workflow-tache` | Règles absolues, configuration, fichier d'état, étapes |
 | Skill | `ajouter-une-feature` | Recette MVVM : modèle Zod, règles pures, stubs, ViewModel, page, route, textes, specs |
 | Skill | `controle-visuel` | Application de la liste de contrôle visuel et rapport par gravité |
@@ -43,8 +43,8 @@ Prérequis : Claude Code, Node.js 18 ou plus (les hooks sont en Node, pour tourn
 ### Pour soi
 
 ```
-/plugin marketplace add yalnguembu/claude-pluggin-frontend
-/plugin install claude-pluggin-frontend@claude-pluggin-frontend
+/plugin marketplace add yalnguembu/plugin-claude-frontend
+/plugin install plugin-claude-frontend@plugin-claude-frontend
 ```
 
 ### Pour un projet (toute l'équipe)
@@ -54,23 +54,23 @@ Dans le `.claude/settings.json` du projet, version épinglée par son étiquette
 ```json
 {
   "extraKnownMarketplaces": {
-    "claude-pluggin-frontend": {
-      "source": { "source": "github", "repo": "yalnguembu/claude-pluggin-frontend", "ref": "v0.1.0" }
+    "plugin-claude-frontend": {
+      "source": { "source": "github", "repo": "yalnguembu/plugin-claude-frontend", "ref": "v0.2.0" }
     }
   },
   "enabledPlugins": {
-    "claude-pluggin-frontend@claude-pluggin-frontend": true
+    "plugin-claude-frontend@plugin-claude-frontend": true
   }
 }
 ```
 
 Claude Code propose alors le plugin à chaque personne qui fait confiance au dossier. Monter de version = changer
-`ref`, puis `/plugin marketplace update claude-pluggin-frontend`.
+`ref`, puis `/plugin marketplace update plugin-claude-frontend`.
 
 ### Configuration
 
-Copier [`templates/claude-pluggin-frontend.json`](templates/claude-pluggin-frontend.json) dans
-`.claude/claude-pluggin-frontend.json` du projet et l'adapter. Les clés absentes prennent leur valeur par défaut
+Copier [`templates/plugin-claude-frontend.json`](templates/plugin-claude-frontend.json) dans
+`.claude/plugin-claude-frontend.json` du projet et l'adapter. Les clés absentes prennent leur valeur par défaut
 (table du skill [`workflow-tache`](skills/workflow-tache/SKILL.md)). Sans fichier, le hook de démarrage le signale.
 
 Si le projet avait déjà son hook de démarrage (état git), le retirer : celui du plugin le remplace.
@@ -78,7 +78,7 @@ Si le projet avait déjà son hook de démarrage (état git), le retirer : celui
 ### Développer le plugin en local
 
 ```bash
-claude --plugin-dir D:/Projets/claude-pluggin-frontend
+claude --plugin-dir D:/Projets/plugin-claude-frontend
 ```
 
 ## Versionnage

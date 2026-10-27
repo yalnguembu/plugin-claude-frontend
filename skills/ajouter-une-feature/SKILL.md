@@ -5,7 +5,7 @@ description: Recette MVVM pour ajouter un écran ou une fonctionnalité au front
 
 # Ajouter une fonctionnalité (MVVM)
 
-Si le projet a sa propre recette (`featureRecipe` de `.claude/claude-pluggin-frontend.json`, par défaut
+Si le projet a sa propre recette (`featureRecipe` de `.claude/plugin-claude-frontend.json`, par défaut
 `docs/AJOUTER-UNE-FEATURE.md`), **lis-la d'abord : elle l'emporte** et nomme la feature de référence à imiter.
 Ce qui suit en est la forme générique. Chemins relatifs à `frontendDir`, alias `@/` → `src/`.
 
@@ -23,7 +23,7 @@ Ce qui suit en est la forme générique. Chemins relatifs à `frontendDir`, alia
 | 7 | Route | `src/router/routes/…` | Mince : `component` + `beforeLoad: requirePermission(context.me, PERMISSION.X)`. Adresse du plan du site, permission du contrat |
 | 8 | Textes | `src/i18n/locales/{fr,en}/*.json` | Format ICU, clés en anglais et hiérarchiques, chaque clé dans les deux langues. Jamais de texte en dur ; montants et dates par les fonctions de format uniques |
 | 9 | Tests d'écran | `e2e/<x>.spec.ts` | Captures nommées selon la liste de contrôle, axe-core sur chacune, pas de défilement horizontal, puis chaque critère d'acceptation |
-| 10 | Vérifier | — | `/claude-pluggin-frontend:verifier` |
+| 10 | Vérifier | — | `/plugin-claude-frontend:verifier` |
 
 ## Pièges
 

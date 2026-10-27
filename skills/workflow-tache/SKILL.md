@@ -7,7 +7,7 @@ description: Règles du workflow d'une tâche front (une tâche, une branche tir
 
 ## Configuration du projet
 
-Lire d'abord `.claude/claude-pluggin-frontend.json` à la racine du projet. Clés absentes = valeurs par défaut :
+Lire d'abord `.claude/plugin-claude-frontend.json` à la racine du projet. Clés absentes = valeurs par défaut :
 
 | Clé | Défaut | Sens |
 |---|---|---|
@@ -70,12 +70,12 @@ Modèle :
 
 | # | Étape | Commande |
 |---|---|---|
-| 0 | Ouvrir la branche | `/claude-pluggin-frontend:tache-debut` |
-| 1 | Se mettre à jour sur le contrat | `/claude-pluggin-frontend:aligner-contrat` |
+| 0 | Ouvrir la branche | `/plugin-claude-frontend:tache-debut` |
+| 1 | Se mettre à jour sur le contrat | `/plugin-claude-frontend:aligner-contrat` |
 | 2 | Lire la fiche de tâche, la fiche du contrat, les sources citées | (dans `tache-debut`) |
 | 3 | Signaler manques et contradictions, en formulaire | (dans `tache-debut`) |
 | 4 | Réaliser | skill `ajouter-une-feature` |
-| 5 | Vérifier | `/claude-pluggin-frontend:verifier` |
-| 6 | Rendre compte | `/claude-pluggin-frontend:compte-rendu` |
+| 5 | Vérifier | `/plugin-claude-frontend:verifier` |
+| 6 | Rendre compte | `/plugin-claude-frontend:compte-rendu` |
 | 7 | Validation par `reviewer` (ordinateur et téléphone) | — |
-| 8 | Livrer par pull request, sur accord | `/claude-pluggin-frontend:livrer` |
+| 8 | Livrer par pull request, sur accord | `/plugin-claude-frontend:livrer` |

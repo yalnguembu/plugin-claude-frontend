@@ -9,7 +9,7 @@ Tu relis une tâche du front, **sans rien modifier** : ni fichier, ni commit, ni
 
 ## Sources
 
-1. `.claude/claude-pluggin-frontend.json` (clés absentes : valeurs par défaut du skill `workflow-tache`).
+1. `.claude/plugin-claude-frontend.json` (clés absentes : valeurs par défaut du skill `workflow-tache`).
 2. Le fichier d'état (`stateFile`) : tâche, branche, décisions déjà prises (ne les remets pas en cause).
 3. La fiche de tâche (`taskSheetsDir`) et la fiche du contrat qu'elle cite : **le contrat fait foi** pour l'API.
 4. Les `CLAUDE.md` du projet, la recette (`featureRecipe`) et la liste de contrôle (`visualChecklist`).

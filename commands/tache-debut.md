@@ -13,7 +13,7 @@ Applique le skill `workflow-tache` (configuration du projet, règles absolues). 
    - `git switch <baseBranch>` puis `git pull --ff-only` ;
    - `git switch -c <type>/<id>-<sujet>` (déduis le nom de la fiche si seul l'ID est donné, en minuscules, sans accent).
    - Jamais depuis une branche protégée.
-3. **Contrat** : si `contractSubmodule` existe, suis `/claude-pluggin-frontend:aligner-contrat` (sans commit).
+3. **Contrat** : si `contractSubmodule` existe, suis `/plugin-claude-frontend:aligner-contrat` (sans commit).
 4. **Lire** la fiche de tâche (`taskSheetsDir`), la fiche du contrat qu'elle cite, puis seulement les sources
    qu'elle cite. Vérifie que la fiche du contrat est prête côté API ; sinon dis-le : la tâche attend ou se prépare sur
    des stubs, en le disant.

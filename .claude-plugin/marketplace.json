@@ -1,11 +1,11 @@
 {
-  "name": "claude-pluggin-frontend",
+  "name": "plugin-claude-frontend",
   "owner": {
     "name": "yalnguembu"
   },
   "plugins": [
     {
-      "name": "claude-pluggin-frontend",
+      "name": "plugin-claude-frontend",
       "source": "./",
       "description": "Workflow de tâche, gardes git/contrat/secrets, recette MVVM et revue du front."
     }

@@ -1,10 +1,17 @@
 {
-  "name": "claude-pluggin-frontend",
-  "version": "0.1.0",
+  "name": "plugin-claude-frontend",
+  "version": "0.2.0",
   "description": "Workflow de tâche (une tâche, une branche, pull request vers develop), gardes sur git, le contrat et les secrets, recette MVVM du front et revue avant présentation.",
   "author": {
     "name": "yalnguembu"
   },
-  "repository": "https://github.com/yalnguembu/claude-pluggin-frontend",
-  "keywords": ["workflow", "git", "mvvm", "react", "contract", "review"]
+  "repository": "https://github.com/yalnguembu/plugin-claude-frontend",
+  "keywords": [
+    "workflow",
+    "git",
+    "mvvm",
+    "react",
+    "contract",
+    "review"
+  ]
 }

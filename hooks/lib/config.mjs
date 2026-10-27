@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { execFileSync } from "node:child_process";
 
-export const CONFIG_FILE = ".claude/claude-pluggin-frontend.json";
+export const CONFIG_FILE = ".claude/plugin-claude-frontend.json";
 
 export const DEFAULTS = {
   baseBranch: "develop",

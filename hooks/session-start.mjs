@@ -8,8 +8,8 @@ const dir = projectDir(input);
 const { config, found, error } = loadConfig(dir);
 const out = [];
 
-if (!found) out.push(`claude-pluggin-frontend : pas de ${CONFIG_FILE}, valeurs par défaut.`);
-if (error) out.push(`claude-pluggin-frontend : ${CONFIG_FILE} illisible (${error}), valeurs par défaut.`);
+if (!found) out.push(`plugin-claude-frontend : pas de ${CONFIG_FILE}, valeurs par défaut.`);
+if (error) out.push(`plugin-claude-frontend : ${CONFIG_FILE} illisible (${error}), valeurs par défaut.`);
 
 const status = git(dir, ["status", "-sb"]);
 if (status) {
@@ -25,7 +25,7 @@ if (status) {
   if (config.protectedBranches.includes(branch))
     out.push(`ATTENTION : le dépôt est sur ${branch}. On n'y fait jamais rien : passer sur ${config.baseBranch} ou sur la branche de la tâche.`);
   else if (branch === config.baseBranch)
-    out.push(`Sur ${branch} : ouvrir la branche de la tâche (/claude-pluggin-frontend:tache-debut) avant toute modification.`);
+    out.push(`Sur ${branch} : ouvrir la branche de la tâche (/plugin-claude-frontend:tache-debut) avant toute modification.`);
 }
 
 if (existsSync(join(dir, config.stateFile)))

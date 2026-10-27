@@ -5,7 +5,7 @@ description: Applique la liste de contrôle visuel du projet à un écran dével
 
 # Contrôle visuel d'un écran
 
-La liste du projet fait foi : `visualChecklist` de `.claude/claude-pluggin-frontend.json` (par défaut
+La liste du projet fait foi : `visualChecklist` de `.claude/plugin-claude-frontend.json` (par défaut
 `design/10-kit-claude-design/controle-visuel.md`). **Lis-la entière** ; ce skill dit seulement comment l'appliquer.
 
 ## Gravité

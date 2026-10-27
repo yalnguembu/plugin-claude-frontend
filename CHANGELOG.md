@@ -3,11 +3,21 @@
 Ce fichier suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) et le
 [versionnage sémantique](https://semver.org/lang/fr/) :
 
-- **majeure** : une règle de garde plus stricte, une clé de configuration renommée ou retirée, une commande renommée ;
+- **majeure** (en 0.x : mineure) : une règle de garde plus stricte, une clé de configuration renommée ou retirée, une commande renommée ;
 - **mineure** : une commande, un skill, un agent, une garde ou une clé de configuration en plus ;
 - **correctif** : une garde corrigée, un texte précisé.
 
 ## [Non publié]
+
+## [0.2.0] - 2026-10-27
+
+### Modifié (rupture)
+
+- Le plugin s'appelle désormais `plugin-claude-frontend` (dépôt, marketplace, plugin).
+  Les commandes passent de `/claude-pluggin-frontend:…` à `/plugin-claude-frontend:…`.
+- Le fichier de configuration devient `.claude/plugin-claude-frontend.json` : renommer celui du projet.
+- Dans `.claude/settings.json` du projet : `extraKnownMarketplaces.plugin-claude-frontend`, `repo`
+  `yalnguembu/plugin-claude-frontend`, `enabledPlugins["plugin-claude-frontend@plugin-claude-frontend"]`.
 
 ## [0.1.0] - 2026-10-27
 
