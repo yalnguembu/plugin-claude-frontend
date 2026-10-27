@@ -1,0 +1,20 @@
+{
+  "baseBranch": "develop",
+  "protectedBranches": ["main"],
+  "reviewer": "Yal",
+  "requireApproval": true,
+  "readOnlyPaths": ["contracts/"],
+  "contractSubmodule": "contracts",
+  "contractVersionFile": "CONTRACT_VERSION",
+  "stateFile": ".claude/etat/en-cours.md",
+  "frontendDir": "frontend",
+  "packageManager": "pnpm",
+  "taskSheetsDir": "design/11-taches",
+  "featureRecipe": "docs/AJOUTER-UNE-FEATURE.md",
+  "visualChecklist": "design/10-kit-claude-design/controle-visuel.md",
+  "checks": ["typecheck", "lint", "test", "check:couleurs"],
+  "e2eScript": "test:e2e",
+  "e2eFinalScript": "test:e2e:fin",
+  "forbiddenInCommits": ["Co-Authored-By", "Claude", "Anthropic"],
+  "allowedEnvFiles": [".env.example"]
+}
